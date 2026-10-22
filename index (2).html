@@ -1,0 +1,1349 @@
+
+<!DOCTYPE html>
+<html lang="rw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Scholar Link Rwanda: menya buruse, akazi, amahugurwa, serivisi za Irembo n’amasomo online.">
+<meta name="theme-color" content="#211747">
+<meta property="og:title" content="Scholar Link Rwanda | Amahirwe y’Uburezi n’Akazi">
+<meta property="og:description" content="Shaka buruse, akazi, amahugurwa n’amakuru yizewe mu Rwanda.">
+<title>Scholar Link Rwanda | Amahirwe y’Uburezi n’Akazi</title>
+
+<style>
+:root {
+  --green: #6d28d9;
+  --dark: #211747;
+  --yellow: #ff8a4c;
+  --bg: #faf7ff;
+  --text: #292044;
+  --muted: #756b8a;
+  --border: #e8def5;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+
+button, input, select, textarea { font: inherit; }
+
+.container {
+  width: min(1120px, 92%);
+  margin: auto;
+}
+
+.top {
+  background: var(--dark);
+  color: white;
+  padding: 8px 0;
+  font-size: 12px;
+}
+
+.top .container, .nav, .foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: white;
+  box-shadow: 0 2px 12px #0001;
+}
+
+.nav { min-height: 72px; }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  background: var(--green);
+  color: white;
+  border: 3px solid var(--yellow);
+  border-radius: 12px;
+  padding: 9px;
+  font-weight: bold;
+}
+
+.brand b {
+  display: block;
+  color: var(--green);
+  font-size: 15px;
+}
+
+.brand small {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.menu {
+  display: none;
+  background: var(--green);
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 9px;
+}
+
+.hero {
+  background: linear-gradient(120deg, var(--dark), #7c3aed);
+  color: white;
+  padding: 65px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 35px;
+  align-items: center;
+}
+
+.pill {
+  display: inline-block;
+  border: 1px solid #ffffff44;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.1;
+}
+
+.hero h1 span { color: var(--yellow); }
+
+.hero p { color: #f1eaff; }
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.gold { background: var(--yellow); color: #243126; }
+.white { background: white; color: var(--green); }
+.primary { background: var(--green); color: white; }
+.outline { border: 1px solid var(--border); background: white; color: var(--green); }
+.danger { background: #b42318; color: white; }
+
+.hero-card {
+  border: 1px solid #ffffff30;
+  background: #ffffff12;
+  border-radius: 16px;
+  padding: 22px;
+}
+
+.quick {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ffffff2b;
+  align-items: flex-start;
+}
+.quick:hover strong { color: var(--yellow); }
+.quick small { display: block; line-height: 1.4; }
+
+.quick:last-child { border: 0; }
+.quick strong { display: block; }
+.quick small { color: #f1eaff; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: -20px;
+}
+
+.stat {
+  background: white;
+  border-radius: 12px;
+  padding: 17px;
+  text-align: center;
+  box-shadow: 0 8px 25px #063e3010;
+}
+
+.stat b {
+  display: block;
+  color: var(--green);
+  font-size: 22px;
+}
+
+section { padding: 62px 0; }
+
+.heading {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 28px;
+}
+
+.eyebrow {
+  font-size: 12px;
+  color: #c2410c;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.heading h2 {
+  color: var(--dark);
+  font-size: clamp(26px, 4vw, 35px);
+  margin: 7px 0;
+}
+
+.heading p, .muted {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.field {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: white;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.tab {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  background: white;
+  border-radius: 22px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tab.active {
+  background: var(--green);
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+}
+
+.card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.cover {
+  padding: 16px;
+  background: linear-gradient(135deg, #f0e7ff, #fff0e8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.symbol { font-size: 32px; }
+
+.tag, .meta {
+  background: #f5f0ff;
+  color: var(--green);
+  border-radius: 20px;
+  padding: 5px 8px;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.cardbody {
+  padding: 17px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.card h3 {
+  font-size: 17px;
+  line-height: 1.3;
+  margin: 0 0 8px;
+}
+
+.card p {
+  font-size: 13px;
+  color: var(--muted);
+  white-space: pre-line;
+}
+
+.card-actions {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.card-actions .btn { width: 100%; }
+
+.empty {
+  grid-column: 1 / -1;
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+}
+
+.irembo { background: #f0e7ff; }
+
+.servicegrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.service-choice {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  padding: 20px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.service-choice:hover {
+  border-color: var(--green);
+  box-shadow: 0 8px 25px #063e3010;
+}
+
+.service-choice h3 { color: var(--dark); }
+
+.service-choice p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.results {
+  margin-top: 28px;
+  padding: 22px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+
+.results[hidden] { display: none; }
+
+.resultshead {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: start;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.serviceitem {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.serviceitem h3 { font-size: 16px; }
+
+.price {
+  color: var(--green);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.serviceitem p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.notice {
+  background: #fff0e8;
+  border: 1px solid #ffd4c2;
+  border-radius: 9px;
+  padding: 13px;
+  color: #7c2d12;
+  font-size: 12px;
+  margin-top: 16px;
+}
+
+.aboutgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  align-items: center;
+}
+
+.aboutbox {
+  background: var(--green);
+  color: white;
+  padding: 27px;
+  border-radius: 15px;
+}
+
+.aboutbox p { color: #f1eaff; }
+
+.points { display: grid; gap: 15px; }
+
+.point {
+  display: flex;
+  gap: 12px;
+}
+
+.point p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.contact { background: #f5f0ff; }
+
+.contactgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 13px;
+}
+
+.contactcard {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.contactcard p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+footer {
+  background: #211747;
+  color: white;
+  padding: 26px 0;
+}
+
+footer p {
+  font-size: 12px;
+  color: #ded5f0;
+  margin: 4px 0;
+}
+
+.adminlink {
+  background: transparent;
+  color: #ded5f0;
+  border: 1px solid #55776b;
+  border-radius: 7px;
+  padding: 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.admin {
+  display: none;
+  background: white;
+  border-top: 4px solid var(--yellow);
+}
+
+.admin.show { display: block; }
+
+.adminlayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.adminpanel {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.form { display: grid; gap: 10px; }
+
+.form label {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.form textarea { min-height: 95px; }
+
+.adminlist { display: grid; gap: 9px; }
+
+.adminitem {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.adminitem h4 {
+  font-size: 13px;
+  margin: 0;
+}
+
+.adminitem small { color: var(--muted); }
+
+.adminitem .btn {
+  font-size: 10px;
+  padding: 7px;
+}
+
+.status {
+  font-size: 12px;
+  color: var(--green);
+  font-weight: bold;
+  min-height: 16px;
+}
+
+.hidden { display: none !important; }
+
+@media (max-width: 850px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .servicegrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .adminlayout { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .menu { display: block; }
+  .nav { padding: 10px 0; }
+  nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+  nav.open { display: flex; }
+  nav a {
+    padding: 10px 0;
+    border-top: 1px solid var(--border);
+  }
+  .brand b { font-size: 12px; }
+  .hero { padding: 45px 0; }
+  .stats { gap: 6px; }
+  .stat { padding: 12px 5px; }
+  .stat b { font-size: 18px; }
+  .stat span { font-size: 10px; }
+  .filters, .grid, .servicegrid, .service-list,
+  .contactgrid, .aboutgrid { grid-template-columns: 1fr; }
+  .resultshead { flex-direction: column; }
+  .adminitem { align-items: flex-start; flex-direction: column; }
+}
+
+/* ===== SCHOLAR LINK RWANDA: DESIGN AMABARA MASHYA ===== */
+:root {
+  --green: #6d28d9;
+  --dark: #211747;
+  --yellow: #ff8a4c;
+  --bg: #faf7ff;
+  --text: #292044;
+  --muted: #756b8a;
+  --border: #e8def5;
+  --blue: #8b5cf6;
+  --purple: #a855f7;
+}
+
+body {
+  background: linear-gradient(180deg, #faf7ff 0%, #ffffff 48%, #f0f7f4 100%);
+  color: var(--text);
+}
+
+header {
+  background: rgba(255, 255, 255, .97);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 5px 24px rgba(16, 42, 67, .12);
+}
+
+.top { background: linear-gradient(90deg, #211747, #6d28d9); }
+.logo { background: linear-gradient(135deg, #6d28d9, #8b5cf6); border-color: var(--yellow); }
+.brand b { color: var(--green); }
+.menu { background: var(--green); }
+
+.hero {
+  background: linear-gradient(125deg, #211747 0%, #6d28d9 55%, #8b5cf6 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  background: rgba(255, 200, 87, .13);
+  right: -95px;
+  top: -120px;
+  pointer-events: none;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 35px solid rgba(255, 255, 255, .06);
+  left: -100px;
+  bottom: -120px;
+  pointer-events: none;
+}
+.hero-grid { position: relative; z-index: 1; }
+.hero h1 span { color: var(--yellow); }
+.hero-card { box-shadow: 0 12px 32px rgba(0, 0, 0, .08); }
+.hero-card h3 { margin-top: 0; color: #fff; }
+.hero-card .quick { font-size: 14px; }
+.hero-card .quick small { font-size: 11px; }
+
+.btn {
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16, 42, 67, .18);
+  filter: brightness(1.04);
+}
+.gold { background: linear-gradient(135deg, #ffb18c, #ff8a4c); color: #292044; }
+.white { background: #fff; color: var(--green); }
+.primary, .tab.active { background: linear-gradient(135deg, #6d28d9, #8b5cf6); color: #fff; }
+.outline { border-color: var(--border); background: #fff; color: var(--green); }
+
+.stat, .card, .service-choice, .contactcard, .results {
+  box-shadow: 0 8px 26px rgba(16, 42, 67, .07);
+}
+.stat { border: 1px solid var(--border); }
+.stat b, .price { color: var(--green); }
+.heading h2, .service-choice h3 { color: var(--dark); }
+.cover { background: linear-gradient(135deg, #f0e7ff 0%, #fff0e8 50%, #e8ddff 100%); }
+.tag, .meta { background: #f0e7ff; color: var(--green); }
+
+.card, .service-choice, .contactcard {
+  border-radius: 15px;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+.card:hover, .service-choice:hover, .contactcard:hover {
+  transform: translateY(-4px);
+  border-color: #c4b5fd;
+  box-shadow: 0 16px 34px rgba(16, 42, 67, .13);
+}
+.irembo { background: linear-gradient(135deg, #f0e7ff, #fff0e8); }
+.contact { background: linear-gradient(135deg, #f0e7ff, #fff0e8); }
+.aboutbox { background: linear-gradient(135deg, #211747, #6d28d9 68%, #8b5cf6); }
+footer { background: linear-gradient(120deg, #160f2e, #211747 55%, #4c1d95); }
+.admin { border-top-color: var(--yellow); }
+
+.field { transition: border-color .2s ease, box-shadow .2s ease; }
+.field:focus {
+  outline: none;
+  border-color: var(--green);
+  box-shadow: 0 0 0 3px rgba(8, 127, 91, .13);
+}
+.notice { background: #fff7e3; border-color: #f1d58b; }
+:focus-visible { outline: 3px solid rgba(255, 200, 87, .95); outline-offset: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}
+
+
+/* Institution directory additions */
+.directory { background: #f5f8fc; }
+.directory-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+.directory-card { display:flex; gap:14px; align-items:flex-start; padding:18px; background:#fff; border:1px solid var(--border); border-radius:14px; box-shadow:0 8px 24px rgba(16,42,67,.06); transition:transform .2s ease, box-shadow .2s ease; }
+.directory-card:hover { transform:translateY(-4px); box-shadow:0 14px 30px rgba(16,42,67,.12); }
+.directory-icon { flex:0 0 44px; height:44px; display:grid; place-items:center; background:linear-gradient(135deg,#f0e7ff,#fff0e8); border-radius:12px; font-size:23px; }
+.directory-card h3 { margin:0 0 5px; font-size:16px; color:var(--dark); }
+.directory-card p { margin:0 0 12px; font-size:12px; color:var(--muted); }
+.directory-card a { color:var(--green); font-size:12px; font-weight:bold; }
+.directory-card a:hover { text-decoration:underline; }
+.quick small { display:block; }
+.hero-card { max-height:650px; overflow:auto; }
+@media(max-width:850px){.directory-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:600px){.directory-grid{grid-template-columns:1fr;}.hero-card{max-height:none;}}
+
+/* Final visual polish: teal, warm gold and clean ivory */
+:root { --green:#6d28d9; --dark:#211747; --yellow:#ff8a4c; --bg:#faf7ff; --text:#292044; --muted:#756b8a; --border:#e8def5; }
+.hero { background: radial-gradient(circle at 85% 15%, rgba(244,201,93,.24), transparent 30%), linear-gradient(135deg,#211747 0%,#6d28d9 72%,#0c9275 100%); }
+.hero h1 span { color:#ff8a4c; }
+.btn.primary { background:linear-gradient(135deg,#6d28d9,#066653); box-shadow:0 6px 15px rgba(8,127,104,.16); }
+.btn.gold { background:linear-gradient(135deg,#ff8a4c,#f8db8b); color:#211747; }
+.heading h2 { color:#211747; }
+.stat, .card, .contactcard, .adminpanel { border-color:#e8def5; }
+.directory { background:linear-gradient(180deg,#eff7f5,#f8fbfa); }
+.directory-card:hover, .card:hover { border-color:#9acfc2; }
+.social-card { border:1px solid var(--border); background:#fff; border-radius:18px; padding:22px; box-shadow:0 8px 26px rgba(7,59,76,.06); }
+.social-card h3 { margin:8px 0 5px; color:var(--dark); }
+.social-card p { color:var(--muted); }
+.social-icon { font-size:30px; }
+.join-note { background:#fff8df; border:1px solid #f0dda0; border-radius:12px; padding:12px 14px; margin-top:16px; color:#5e4b16; font-size:13px; }
+
+
+.material-card { background:#fff; border:1px solid var(--border); border-radius:18px; padding:20px; box-shadow:0 8px 24px rgba(33,23,71,.06); }
+.material-card h3 { margin:8px 0; color:var(--dark); }
+.material-card p { color:var(--muted); font-size:13px; }
+.material-card .material-price { font-weight:800; color:#6d28d9; margin:10px 0 14px; }
+
+</style>
+</head>
+
+<body>
+
+<div class="top">
+  <div class="container">
+    <span>🎓 Amahirwe y'Uburezi n'Akazi</span>
+    <span>🇷🇼 Rwanda</span>
+  </div>
+</div>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <span class="logo">SLR</span>
+      <span>
+        <b>SCHOLAR LINK RWANDA</b>
+        <small>Amahirwe y'Uburezi n'Akazi</small>
+      </span>
+    </a>
+
+    <button class="menu" id="menu">☰ Menu</button>
+
+    <nav id="nav">
+      <a href="#home">Ahabanza</a>
+      <a href="#opportunities">Amahirwe</a>
+      <a href="#institutions">Ibigo</a>
+      <a href="#irembo">Serivisi za Irembo</a>
+      <a href="#online-lessons">Online Lessons</a>
+      <a href="#study-materials">Notes & Marking Guides</a>
+      <a href="#how-it-works">Uko dukora</a>
+      <a href="#about">Abo turibo</a>
+      <a href="#contact">Tuvugishe</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="pill">IKAZE KURI SCHOLAR LINK RWANDA</span>
+      <h1>Menya amahirwe yawe.<br><span>Utere imbere.</span></h1>
+      <p>
+        Menya buruse, akazi, amahugurwa na serivisi za Leta.
+        Reba ibisabwa, deadline n'aho usaba.
+      </p>
+      <div class="actions">
+        <a class="btn gold" href="#opportunities">🔎 Reba amahirwe</a>
+        <a class="btn white" href="#contact">Tuvugishe</a>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>Shaka amahirwe yawe</h3>
+      <a class="quick" href="#opportunities" data-catlink="Scholarship">
+        🎓 <span><strong>Scholarships</strong><small>Amakuru ya buruse</small></span>
+      </a>
+      <a class="quick" href="#opportunities" data-catlink="Akazi">
+        💼 <span><strong>Akazi</strong><small>Imyanya y'akazi</small></span>
+      </a>
+      <a class="quick" href="#opportunities" data-catlink="Amahugurwa">
+        📚 <span><strong>Amahugurwa</strong><small>Ubumenyi bushya</small></span>
+      </a>
+      <a class="quick" href="#irembo">
+        🏛️ <span><strong>Serivisi za Irembo</strong><small>Serivisi za Leta</small></span>
+      </a>
+      <a class="quick" href="https://www.mifotra.gov.rw/" target="_blank" rel="noopener noreferrer">
+        🏢 <span><strong>MIFOTRA</strong><small>Amakuru y'akazi n'abakozi ba Leta ↗</small></span>
+      </a>
+      <a class="quick" href="https://police.gov.rw/" target="_blank" rel="noopener noreferrer">
+        👮 <span><strong>RNP</strong><small>Rwanda National Police ↗</small></span>
+      </a>
+      <a class="quick" href="https://www.mod.gov.rw/" target="_blank" rel="noopener noreferrer">
+        🪖 <span><strong>RDF</strong><small>Amakuru ajyanye n'Ingabo z'u Rwanda ↗</small></span>
+      </a>
+      <a class="quick" href="https://www.rcs.gov.rw/" target="_blank" rel="noopener noreferrer">
+        🏛️ <span><strong>RCS</strong><small>Rwanda Correctional Service ↗</small></span>
+      </a>
+      <a class="quick" href="https://www.nesa.gov.rw/" target="_blank" rel="noopener noreferrer">
+        📝 <span><strong>NESA</strong><small>Ibizamini n'isuzuma ry'uburezi ↗</small></span>
+      </a>
+      <a class="quick" href="https://www.rtb.gov.rw/" target="_blank" rel="noopener noreferrer">
+        🛠️ <span><strong>RTB</strong><small>TVET n'amahugurwa y'imyuga ↗</small></span>
+      </a>
+      <a class="quick" href="https://ur.ac.rw/" target="_blank" rel="noopener noreferrer">
+        🎓 <span><strong>UR</strong><small>University of Rwanda ↗</small></span>
+      </a>
+      <a class="quick" href="https://rp.ac.rw/" target="_blank" rel="noopener noreferrer">
+        🏫 <span><strong>RP</strong><small>Rwanda Polytechnic ↗</small></span>
+      </a>
+      <a class="quick" href="#institutions">
+        🏢 <span><strong>Private Sector</strong><small>Ibigo byigenga n'amahirwe y'akazi ↗</small></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="container stats">
+  <div class="stat"><b>🎓</b><span>Amakuru y'Uburezi</span></div>
+  <div class="stat"><b>💼</b><span>Akazi n'Amahugurwa</span></div>
+  <div class="stat"><b>🇷🇼</b><span>Serivisi mu Rwanda</span></div>
+</div>
+
+<section id="opportunities">
+  <div class="container">
+    <div class="heading">
+      <span class="eyebrow">AMAHIRWE YAWE</span>
+      <h2>Amakuru y'Uburezi n'Akazi</h2>
+      <p>Shakisha amatangazo, usome ibisabwa kandi ukurikire link yemewe.</p>
+    </div>
+
+    <div class="filters">
+      <input id="search" class="field" placeholder="🔎 Shaka buruse, akazi..." type="search">
+      <select id="filter" class="field">
+        <option value="Byose">Ibyiciro byose</option>
+        <option>Scholarship</option>
+        <option>Akazi</option>
+        <option>Amahugurwa</option>
+        <option>Irembo</option>
+        <option>Andi</option>
+      </select>
+    </div>
+
+    <div class="tabs" id="tabs">
+      <button class="tab active" data-cat="Byose">Byose</button>
+      <button class="tab" data-cat="Scholarship">🎓 Buruse</button>
+      <button class="tab" data-cat="Akazi">💼 Akazi</button>
+      <button class="tab" data-cat="Amahugurwa">📚 Amahugurwa</button>
+      <button class="tab" data-cat="Irembo">🏛️ Irembo</button>
+      <button class="tab" data-cat="Andi">📢 Andi</button>
+    </div>
+
+    <div class="grid" id="posts"></div>
+  </div>
+</section>
+
+
+<section class="directory" id="institutions">
+  <div class="container">
+    <div class="heading">
+      <span class="eyebrow">INSTITUTIONS & CAREER LINKS</span>
+      <h2>Ibigo n'imbuga zifasha kubona amahirwe</h2>
+      <p>Hitamo ikigo ujye ku rubuga rwacyo urebe amatangazo, ibisabwa n'igihe ntarengwa. Aya ni amahuza y'ibanze; genzura ko URL ikiri iya nyirayo mbere yo gutanga amakuru.</p>
+    </div>
+    <div class="directory-grid">
+      <article class="directory-card"><div class="directory-icon">🏢</div><div><h3>MIFOTRA</h3><p>Minisiteri y'Abakozi ba Leta n'Umurimo.</p><a href="https://www.mifotra.gov.rw/" target="_blank" rel="noopener noreferrer">Jya ku rubuga rwa MIFOTRA ↗</a></div></article>
+      <article class="directory-card"><div class="directory-icon">👮</div><div><h3>RNP</h3><p>Rwanda National Police; reba amatangazo n'amakuru yemewe.</p><a href="https://police.gov.rw/" target="_blank" rel="noopener noreferrer">Jya ku rubuga rwa RNP ↗</a></div></article>
+      <article class="directory-card"><div class="directory-icon">🪖</div><div><h3>RDF / Ministry of Defence</h3><p>Amakuru y'Ingabo z'u Rwanda n'itangazo ryemewe.</p><a href="https://www.mod.gov.rw/" target="_blank" rel="noopener noreferrer">Jya ku rubuga rwa Minisiteri y'Ingabo ↗</a></div></article>
+      <article class="directory-card"><div class="directory-icon">🏛️</div><div><h3>RCS</h3><p>Rwanda Correctional Service.</p><a href="https://www.rcs.gov.rw/" target="_blank" rel="noopener noreferrer">Jya ku rubuga rwa RCS ↗</a></div></article>
+      <article class="directory-card"><div class="directory-icon">📝</div><div><h3>NESA</h3><p>National Examination and School Inspection Authority.</p><a href="https://www.nesa.gov.rw/" target="_blank" rel="noopener noreferrer">Jya ku rubuga rwa NESA ↗</a></div></article>
+      <article class="directory-card"><div class="directory-icon">🛠️</div><div><h3>RTB</h3><p>Rwanda TVET Board; imyuga n'amahugurwa.</p><a href="https://www.rtb.gov.rw/" target="_blank" rel="noopener noreferrer">Jya ku rubuga rwa RTB ↗</a></div></article>
+      <article class="directory-card"><div class="directory-icon">🎓</div><div><h3>UR</h3><p>University of Rwanda; amakuru y'amasomo n'ubusabe.</p><a href="https://ur.ac.rw/" target="_blank" rel="noopener noreferrer">Jya ku rubuga rwa UR ↗</a></div></article>
+      <article class="directory-card"><div class="directory-icon">🏫</div><div><h3>RP</h3><p>Rwanda Polytechnic; amashuri y'imyuga n'ikoranabuhanga.</p><a href="https://rp.ac.rw/" target="_blank" rel="noopener noreferrer">Jya ku rubuga rwa RP ↗</a></div></article>
+      <article class="directory-card"><div class="directory-icon">🏦</div><div><h3>RDB</h3><p>Amakuru y'ishoramari, ubucuruzi n'iterambere.</p><a href="https://rdb.rw/" target="_blank" rel="noopener noreferrer">Jya ku rubuga rwa RDB ↗</a></div></article>
+      <article class="directory-card"><div class="directory-icon">📡</div><div><h3>MTN Rwanda</h3><p>Urubuga rw'ikigo cy'itumanaho; reba career/vacancies.</p><a href="https://www.mtn.co.rw/" target="_blank" rel="noopener noreferrer">Jya ku rubuga rwa MTN ↗</a></div></article>
+      <article class="directory-card"><div class="directory-icon">📱</div><div><h3>Airtel Rwanda</h3><p>Urubuga rw'ikigo cy'itumanaho; reba amakuru y'akazi.</p><a href="https://www.airtel.co.rw/" target="_blank" rel="noopener noreferrer">Jya ku rubuga rwa Airtel ↗</a></div></article>
+      <article class="directory-card"><div class="directory-icon">🏦</div><div><h3>Bank of Kigali</h3><p>Ibikorwa bya banki n'amahirwe y'akazi mu rwego rw'imari.</p><a href="https://www.bk.rw/" target="_blank" rel="noopener noreferrer">Jya ku rubuga rwa BK ↗</a></div></article>
+      <article class="directory-card"><div class="directory-icon">✈️</div><div><h3>RwandAir</h3><p>Urubuga rw'indege z'u Rwanda; reba imyanya y'akazi.</p><a href="https://www.rwandair.com/" target="_blank" rel="noopener noreferrer">Jya ku rubuga rwa RwandAir ↗</a></div></article>
+      <article class="directory-card"><div class="directory-icon">🏭</div><div><h3>Bralirwa</h3><p>Urubuga rw'ikigo cy'inganda; reba career opportunities.</p><a href="https://bralirwa.com/" target="_blank" rel="noopener noreferrer">Jya ku rubuga rwa Bralirwa ↗</a></div></article>
+      <article class="directory-card"><div class="directory-icon">💼</div><div><h3>Private Sector / Ibigo byigenga</h3><p>Reba imbuga z'ibigo, banki, inganda, itumanaho n'ubucuruzi ushaka gukoramo.</p><a href="https://rdb.rw/" target="_blank" rel="noopener noreferrer">Tangirira kuri RDB ↗</a></div></article>
+    </div>
+    <div class="notice"><b>Umutekano:</b> Scholar Link Rwanda itanga amahuza yo kugufasha gushaka amakuru. Ntiyemeza ko buri kigo gifite imyanya y'akazi ifunguye ubu. Ntukishyure amafaranga y'ubusabe utabanje kugenzura itangazo n'urubuga rwemewe.</div>
+  </div>
+</section>
+
+<section class="irembo" id="irembo">
+  <div class="container">
+    <div class="heading">
+      <span class="eyebrow">GOVERNMENT SERVICES</span>
+      <h2>Gateway Services</h2>
+      <p>
+        Kanda icyiciro kugira ngo ubone serivisi n'amakuru y'ibiciro.
+        Emeza igiciro kuri IremboGov mbere yo kwishyura.
+      </p>
+    </div>
+
+    <div class="servicegrid">
+      <button class="service-choice" data-service="identity">
+        <div class="symbol">🪪</div>
+        <h3>Identity card</h3>
+        <p>Indangamuntu n'izindi serivisi zijyanye na yo.</p>
+        <span class="btn primary">Reba serivisi →</span>
+      </button>
+
+      <button class="service-choice" data-service="documents">
+        <div class="symbol">📄</div>
+        <h3>Decisions and documents</h3>
+        <p>Ibyemezo n'inyandiko za Leta.</p>
+        <span class="btn primary">Reba serivisi →</span>
+      </button>
+
+      <button class="service-choice" data-service="public">
+        <div class="symbol">🏢</div>
+        <h3>Public service</h3>
+        <p>Izindi serivisi za Leta ziboneka kuri IremboGov.</p>
+        <span class="btn primary">Reba serivisi →</span>
+      </button>
+    </div>
+
+    <div class="results" id="results" hidden>
+      <div class="resultshead">
+        <div>
+          <span class="eyebrow">URUTONDE RWA SERIVISI</span>
+          <h2 id="resultTitle">Serivisi</h2>
+          <p id="resultDesc" class="muted"></p>
+        </div>
+        <button class="btn outline" id="closeResults">Funga ✕</button>
+      </div>
+
+      <div class="service-list" id="serviceList"></div>
+
+      <div class="notice">
+        <b>Icyitonderwa:</b>
+        Ibiciro bishobora guhinduka kandi biterwa na serivisi.
+        Aho igiciro kitagenzuwe, handitse “Emeza igiciro”.
+        Banza urebe amakuru agezweho kuri IremboGov.
+      </div>
+
+      <a class="btn primary" style="margin-top:14px"
+         href="https://www.irembo.gov.rw/"
+         target="_blank" rel="noopener">
+        Jya kuri IremboGov ↗
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container aboutgrid">
+    <div class="aboutbox">
+      <h2>Abo turibo</h2>
+      <p>
+        Scholar Link Rwanda ni urubuga rugamije gufasha Abanyarwanda
+        kumenya amahirwe y'uburezi, akazi, amahugurwa na serivisi zitandukanye.
+      </p>
+      <p><b>Nyiri website:</b> Fabrice Tuyishime</p>
+      <p><b>Intego:</b> Amahirwe y'Uburezi n'Akazi</p>
+    </div>
+
+    <div class="points">
+      <div class="point">✅ <div><b>Amakuru y'amahirwe</b><p>Menya buruse, akazi n'amahugurwa.</p></div></div>
+      <div class="point">✅ <div><b>Ibisabwa na deadline</b><p>Soma ibisabwa n'igihe ntarengwa cyo gusaba.</p></div></div>
+      <div class="point">✅ <div><b>Ubufasha</b><p>Twandikire niba ukeneye ubusobanuro.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="heading">
+      <span class="eyebrow">TUVUGISHE</span>
+      <h2>Twiteguye kugufasha</h2>
+    </div>
+
+    <div class="contactgrid">
+      <div class="contactcard">
+        <div class="symbol">📱</div><h3>WhatsApp</h3><p>0789 264 529</p>
+        <a class="btn primary" href="https://wa.me/250789264529" target="_blank" rel="noopener noreferrer">Twandikire</a>
+      </div>
+      <div class="contactcard">
+        <div class="symbol">👥</div><h3>Join WhatsApp Community</h3><p>Injira mu itsinda ryacu ubone amahirwe mashya.</p>
+        <a class="btn primary" href="https://chat.whatsapp.com/IMtZmQt8ZBj4MyKLpDbSL7" target="_blank" rel="noopener noreferrer">Join WhatsApp</a>
+      </div>
+      <div class="contactcard">
+        <div class="symbol">✉️</div><h3>Email y'ubufasha</h3><p>fabricetuyishime200@gmail.com</p>
+        <a class="btn primary" href="mailto:fabricetuyishime200@gmail.com?subject=Ubufasha%20-%20Scholar%20Link%20Rwanda">Twandikire kuri Email</a>
+      </div>
+      <div class="contactcard">
+        <div class="symbol">▶️</div><h3>YouTube</h3><p>Scholar Link Rwanda</p>
+        <a class="btn primary" href="https://www.youtube.com/channel/UCk_WBexx1LcJbV_4cg5p1eg" target="_blank" rel="noopener noreferrer">Shaka channel</a>
+      </div>
+      <div class="contactcard">
+        <div class="symbol">📘</div><h3>Facebook</h3><p>Scholar Link Rwanda</p>
+        <a class="btn primary" href="https://www.facebook.com/search/pages/?q=Scholar%20Link%20Rwanda" target="_blank" rel="noopener noreferrer">Shaka page</a>
+      </div>
+      <div class="contactcard">
+        <div class="symbol">☎️</div><h3>Telefoni</h3><p>0793 475 385</p>
+        <a class="btn primary" href="tel:+250793475385">Duhamagare</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="how-it-works">
+  <div class="container">
+    <div class="heading"><span class="eyebrow">UKO DUKORA</span><h2>Uko wakoresha Scholar Link Rwanda</h2><p>Intambwe nke zagufasha gukoresha urubuga neza.</p></div>
+    <div class="directory-grid">
+      <article class="directory-card"><div class="directory-icon">🔎</div><div><h3>1. Shaka amahirwe</h3><p>Koresha search cyangwa ibyiciro ushake buruse, akazi n'amahugurwa bijyanye nawe.</p></div></article>
+      <article class="directory-card"><div class="directory-icon">📋</div><div><h3>2. Soma ibisabwa</h3><p>Reba ibisabwa na deadline. Niba hari ibyo utumva, twandikire kugira ngo tugufashe kubisobanukirwa.</p></div></article>
+      <article class="directory-card"><div class="directory-icon">🔗</div><div><h3>3. Saba ku rubuga rwemewe</h3><p>Koresha link y'ikigo gitanga amahirwe kandi uhore ugenzura amakuru mashya.</p></div></article>
+    </div>
+    <div class="join-note"><b>Kwizerwa:</b> Scholar Link Rwanda igufasha kubona amakuru n'amahuza. Igihe cyose genzura itangazo ku rubuga rwemewe rw'ikigo mbere yo kohereza ibyangombwa cyangwa kwishyura amafaranga.</div>
+  </div>
+</section>
+
+<section class="directory" id="online-lessons">
+  <div class="container">
+    <div class="heading">
+      <span class="eyebrow">KWIGA ONLINE</span>
+      <h2>Online Lessons</h2>
+      <p>Amasomo n'amahugurwa azashyirwa hano na admin wa Scholar Link Rwanda.</p>
+    </div>
+    <div class="grid" id="lessonsGrid"><div class="empty">Turimo kureba amasomo...</div></div>
+  </div>
+</section>
+
+<section id="study-materials" class="directory">
+  <div class="container">
+    <div class="heading">
+      <span class="eyebrow">IBITABO N'IBIZAMINI</span>
+      <h2>Notes, Ibibazo & Marking Guides</h2>
+      <p>Shaka notes, ibibazo n'ibisubizo, ndetse na marking guides. Marking guide imwe igura amafaranga 200 RWF.</p>
+    </div>
+    <div class="join-note" style="margin-bottom:18px">
+      <b>Uko wishyura:</b> Kanda kuri USSD code <strong>*182*8*1*918227#</strong> kuri telefone yawe, ukurikize amabwiriza yo kwishyura kuri <strong>FABRICE</strong>. Nyuma yo kwishyura, kanda kuri “Saba download” wohereze izina ry'igikoresho n'icyemezo/transaction ID kuri WhatsApp. Download ihabwa nyuma yo kugenzura ko ubwishyu bwageze.
+      <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn primary" type="button" id="copyPaymentCode">Koporora USSD code</button><a class="btn gold" href="https://wa.me/250789264529?text=Muraho%20Scholar%20Link%20Rwanda%2C%20ndashaka%20ubufasha%20bwo%20kwishyura%20no%20gukora%20download." target="_blank" rel="noopener">Vugana natwe kuri WhatsApp</a></div>
+      <p class="muted" style="margin:10px 0 0">Icyitonderwa: ntitwemeza ubwishyu mu buryo bwikora kuri iyi website. Banza ugenzure izina FABRICE n'amakuru agaragara kuri telefone mbere yo kwemeza kwishyura.</p>
+    </div>
+    <div class="grid" id="resourcesGrid"><div class="empty">Turimo kureba ibikoresho byo kwiga...</div></div>
+  </div>
+</section>
+
+<section class="admin" id="admin">
+  <div class="container">
+    <div class="heading">
+      <span class="eyebrow">ADMIN DASHBOARD</span>
+      <h2>Genzura amatangazo</h2>
+      <p>Ongeramo, uhindure cyangwa usibe amatangazo.</p>
+    </div>
+
+    <div class="adminpanel" id="loginPanel">
+      <h3>Admin Login</h3>
+      <p class="muted">Injira ukoresheje email na password by’umuyobozi byaremwe muri Supabase Authentication.</p>
+
+      <form class="form" id="loginForm">
+        <label>Email ya Admin<input class="field" id="username" type="email" autocomplete="username" required placeholder="admin@example.com"></label>
+        <label>Password<input class="field" id="password" type="password" required></label>
+        <button class="btn primary">Injira</button>
+        <p class="status" id="loginMsg"></p>
+      </form>
+    </div>
+
+    <div id="dashboard" class="hidden">
+      <div class="adminpanel" style="margin-bottom:16px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <b>Admin dashboard · Fabrice Tuyishime</b>
+        <button class="btn danger" id="logout">Sohoka</button>
+      </div>
+
+      <div class="adminlayout">
+        <div class="adminpanel">
+          <h3 id="formTitle">Ongeramo itangazo</h3>
+
+          <form class="form" id="postForm">
+            <input type="hidden" id="editId">
+
+            <label>
+              Umutwe w'itangazo *
+              <input class="field" id="title" required maxlength="150">
+            </label>
+
+            <label>
+              Icyiciro
+              <select class="field" id="category">
+                <option>Scholarship</option>
+                <option>Akazi</option>
+                <option>Amahugurwa</option>
+                <option>Irembo</option>
+                <option>Andi</option>
+              </select>
+            </label>
+
+            <label>
+              Ibisobanuro *
+              <textarea class="field" id="description" required maxlength="5000"></textarea>
+            </label>
+
+            <label>
+              Deadline
+              <input class="field" id="deadline" placeholder="Urugero: 30/11/2026">
+            </label>
+
+            <label>
+              Link y'itangazo
+              <input class="field" id="url" type="url" placeholder="https://...">
+              <small class="muted">Nta link? Siga ubusa.</small>
+            </label>
+
+            <button class="btn primary" id="saveBtn">Bika itangazo</button>
+            <button class="btn outline hidden" type="button" id="cancelEdit">Hagarika guhindura</button>
+            <p class="status" id="postMsg"></p>
+          </form>
+        </div>
+
+        <div class="adminpanel">
+          <h3>Amatangazo ariho</h3>
+          <div class="adminlist" id="adminList"></div>
+        </div>
+      </div>
+      <div class="adminlayout" style="margin-top:16px">
+        <div class="adminpanel">
+          <h3>Ongeramo Online Lesson</h3>
+          <form class="form" id="lessonForm">
+            <label>Izina ry'isomo *<input class="field" id="lessonTitle" required maxlength="180"></label>
+            <label>Icyiciro<input class="field" id="lessonCategory" maxlength="100" placeholder="Urugero: Computer skills"></label>
+            <label>Ibisobanuro<textarea class="field" id="lessonDescription" maxlength="3000"></textarea></label>
+            <label>Link ya video/isomo *<input class="field" id="lessonUrl" type="url" required placeholder="https://..."></label>
+            <button class="btn primary" type="submit">Bika isomo</button>
+            <p class="status" id="lessonMsg"></p>
+          </form>
+        </div>
+        <div class="adminpanel"><h3>Amasomo ariho</h3><div class="adminlist" id="adminLessons"></div></div>
+      </div>
+      <div class="adminlayout" style="margin-top:16px">
+        <div class="adminpanel">
+          <h3>Ongeramo Notes / Marking Guide</h3>
+          <form class="form" id="resourceForm">
+            <label>Izina ry'igikoresho *<input class="field" id="resourceTitle" required maxlength="180" placeholder="Urugero: Mathematics S6 Marking Guide"></label>
+            <label>Ubwoko *<select class="field" id="resourceCategory"><option value="Marking Guide">Marking Guide (200 RWF)</option><option value="Ibibazo n'ibisubizo">Ibibazo n'ibisubizo</option><option value="Notes">Notes</option><option value="Ibindi">Ibindi</option></select></label>
+            <label>Ibisobanuro<textarea class="field" id="resourceDescription" maxlength="2500" placeholder="Icyiciro, isomo, umwaka... "></textarea></label>
+            <label>Upload PDF uhereye kuri mudasobwa <input class="field" id="resourcePdfFile" type="file" accept="application/pdf,.pdf"></label>
+            <small class="muted">Hitamo PDF iri kuri mudasobwa yawe (ntirenge 20 MB). PDF izabikwa muri Supabase Storage, mu bubiko bwihariye.</small>
+            <label>CYANGWA link ya PDF/Drive <input class="field" id="resourceFileUrl" type="url" placeholder="https://..." autocomplete="url"></label>
+            <small class="muted">Hitamo PDF yo kuri mudasobwa cyangwa ushyiremo link. Ntugomba kuzuza byombi.</small>
+            <button class="btn primary" type="submit">Bika igikoresho</button>
+            <p class="status" id="resourceMsg"></p>
+          </form>
+        </div>
+        <div class="adminpanel"><h3>Ibikoresho byashyizweho</h3><div class="adminlist" id="adminResources"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container foot">
+    <div>
+      <b>SCHOLAR LINK RWANDA</b>
+      <p>Amahirwe y'Uburezi n'Akazi</p>
+      <p>Nyiri website: Fabrice Tuyishime</p>
+      <p>Email: <a href="mailto:fabricetuyishime200@gmail.com">fabricetuyishime200@gmail.com</a></p>
+      <p>© <span id="year"></span> Scholar Link Rwanda</p>
+    </div>
+    <button class="adminlink" id="openAdmin">Admin Login</button>
+  </div>
+</footer>
+
+<script type="module">
+"use strict";
+import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+
+const SUPABASE_URL = "https://wjjsgcnuriftgzrxxypp.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_p7XhyAznnXuricXsS1NuLQ_AIEZtvBY";
+// Email yonyine yemerewe kugerageza kwinjira muri Admin.
+const ADMIN_EMAIL = "tuyishimefabrice513@gmail.com";
+// Umutekano: ntubike session ya admin muri browser. Iyo page ifunze cyangwa refresh ikozwe,
+// admin agomba kongera kwinjiza email na password.
+const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
+  auth: {
+    persistSession: false,
+    autoRefreshToken: false,
+    detectSessionInUrl: false
+  }
+});
+const $ = selector => document.querySelector(selector);
+const names = { Scholarship:"Scholarship / Buruse", Akazi:"Akazi", Amahugurwa:"Amahugurwa", Irembo:"Serivisi za Irembo", Andi:"Andi makuru" };
+const icons = { Scholarship:"🎓", Akazi:"💼", Amahugurwa:"📚", Irembo:"🏛️", Andi:"📢" };
+let posts = [], lessons = [], resources = [], resourceFiles = [], active = "Byose", currentUser = null, logged = false;
+
+function esc(value) { return String(value ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"})[c]); }
+function safeURL(value) { if (!String(value||"").trim()) return ""; try { const u=new URL(value); return ["http:","https:"].includes(u.protocol)?u.href:""; } catch { return ""; } }
+function message(id, text) { const el=$(id); if(el) el.textContent=text; }
+function setStatus(id,text,kind="") { const el=$(id); if(!el)return; el.textContent=text; el.className="status"+(kind?" "+kind:""); }
+function render() {
+  const query=$("#search").value.trim().toLowerCase(), filter=$("#filter").value;
+  const list=posts.filter(p=>{
+    const hay=[p.title,p.description,p.category].join(" ").toLowerCase();
+    return hay.includes(query)&&(filter==="Byose"||p.category===filter)&&(active==="Byose"||p.category===active);
+  });
+  $("#posts").innerHTML=list.length?list.map(post=>{const url=safeURL(post.url);return `<article class="card"><div class="cover"><span class="symbol">${icons[post.category]||"📢"}</span><span class="tag">${esc(names[post.category]||post.category)}</span></div><div class="cardbody"><h3>${esc(post.title)}</h3><p>${esc(post.description)}</p><div><span class="meta">📅 ${esc(post.deadline||"Nta deadline yatanzwe")}</span></div><div class="card-actions">${url?`<a class="btn primary" href="${esc(url)}" target="_blank" rel="noopener">Soma / Saba ↗</a>`:`<span class="meta">Link y'itangazo ntirashyirwamo</span>`}</div></div></article>`;}).join(""):`<div class="empty">Nta tangazo ribonetse. Gerageza andi magambo.</div>`;
+  if(logged) renderAdmin();
+}
+function renderLessons() {
+  $("#lessonsGrid").innerHTML=lessons.length?lessons.map(l=>`<article class="directory-card"><div class="directory-icon">📚</div><div><h3>${esc(l.title)}</h3><p>${esc(l.category||"Online lesson")}${l.description?" — "+esc(l.description):""}</p><a href="${esc(safeURL(l.lesson_url))}" target="_blank" rel="noopener noreferrer">Tangira isomo ↗</a></div></article>`).join(""):`<div class="empty">Nta somo rirashyirwaho. Amasomo azagaragara hano amaze kongerwa na admin.</div>`;
+  if(logged) renderAdminLessons();
+}
+function renderResources() {
+  const grid=$("#resourcesGrid");
+  grid.innerHTML=resources.length?resources.map(r=>{
+    const price=r.category==="Marking Guide"?"200 RWF":"Igiciro kizemezwa na admin";
+    const msg=`Muraho Scholar Link Rwanda, ndashaka gukora download ya: ${r.title}. Ubwoko: ${r.category}. Nishyura nkoresheje *182*8*1*918227# kuri FABRICE. Transaction ID: `;
+    const wa="https://wa.me/250789264529?text="+encodeURIComponent(msg);
+    return `<article class="material-card"><div class="directory-icon">${r.category==="Marking Guide"?"📝":r.category==="Notes"?"📚":"📄"}</div><h3>${esc(r.title)}</h3><p>${esc(r.category)}${r.description?" — "+esc(r.description):""}</p><div class="material-price">${price}</div><a class="btn primary" href="${wa}" target="_blank" rel="noopener noreferrer">Saba download kuri WhatsApp ↗</a></article>`;
+  }).join(""):`<div class="empty">Nta bikoresho birashyirwaho. Admin azashyiraho notes, ibibazo n'ibisubizo, na marking guides.</div>`;
+  if(logged) renderAdminResources();
+}
+async function loadData() {
+  const [pr,lr,rr]=await Promise.all([
+    supabase.from("posts").select("id,title,category,description,deadline,url,created_at").order("created_at",{ascending:false}).limit(200),
+    supabase.from("lessons").select("id,title,category,description,lesson_url,created_at").order("created_at",{ascending:false}).limit(200),
+    supabase.from("resources").select("id,title,category,description,created_at").order("created_at",{ascending:false}).limit(200)
+  ]);
+  posts=pr.error?[]:(pr.data||[]); lessons=lr.error?[]:(lr.data||[]); resources=rr.error?[]:(rr.data||[]);
+  if(logged){const rf=await supabase.from("resource_files").select("resource_id,file_url,storage_path");resourceFiles=rf.error?[]:(rf.data||[]);if(rf.error)console.warn("Admin resource links could not be loaded:",rf.error.message);}else{resourceFiles=[];}
+  render(); renderLessons(); renderResources();
+  if(pr.error) console.warn("Posts table not ready or access blocked:",pr.error.message);
+  if(lr.error) console.warn("Lessons table not ready or access blocked:",lr.error.message);
+  if(rr.error) console.warn("Resources table not ready; run the SQL setup supplied with this website:",rr.error.message);
+}
+function renderAdmin() {
+  $("#adminList").innerHTML=posts.length?posts.map(p=>`<div class="adminitem"><div><h4>${esc(p.title)}</h4><small>${esc(names[p.category]||p.category)}</small></div><div><button class="btn danger" data-del-post="${esc(p.id)}">Siba</button></div></div>`).join(""):`<p class="muted">Nta matangazo ahari.</p>`;
+}
+function renderAdminLessons() {
+  $("#adminLessons").innerHTML=lessons.length?lessons.map(l=>`<div class="adminitem"><div><h4>${esc(l.title)}</h4><small>${esc(l.category||"Online lesson")}</small></div><button class="btn danger" data-del-lesson="${esc(l.id)}">Siba</button></div>`).join(""):`<p class="muted">Nta masomo ahari.</p>`;
+}
+async function renderAdminResources() {
+  const el=$("#adminResources"); if(!el)return;
+  if(!resources.length){el.innerHTML='<p class="muted">Nta bikoresho byashyizweho.</p>';return;}
+  const rows=await Promise.all(resources.map(async r=>{
+    const f=resourceFiles.find(x=>String(x.resource_id)===String(r.id)); let fileLink='';
+    if(f?.storage_path){const {data}=await supabase.storage.from('study-resources').createSignedUrl(f.storage_path,300);if(data?.signedUrl)fileLink=` · <a href="${esc(data.signedUrl)}" target="_blank" rel="noopener noreferrer">Fungura PDF ↗</a>`;else fileLink=' · PDF yabitswe (signed link ntiyabonetse)';}
+    else if(f?.file_url){fileLink=` · <a href="${esc(safeURL(f.file_url))}" target="_blank" rel="noopener noreferrer">Fungura link ya dosiye ↗</a>`;}
+    else fileLink=' · Nta dosiye ibitswe';
+    return `<div class="adminitem"><div><h4>${esc(r.title)}</h4><small>${esc(r.category)}${fileLink}</small></div><button class="btn danger" data-del-resource="${esc(r.id)}">Siba</button></div>`;
+  }));
+  el.innerHTML=rows.join('');
+}
+function resetPostForm(){ $("#postForm").reset(); $("#editId").value=""; $("#formTitle").textContent="Ongeramo itangazo"; $("#saveBtn").textContent="Bika itangazo"; $("#cancelEdit").classList.add("hidden"); message("#postMsg",""); }
+async function checkAdmin(){
+  const {data,error}=await supabase.auth.getUser();
+  currentUser=data?.user||null;
+  logged=false;
+  if(currentUser && !error && currentUser.email?.toLowerCase()===ADMIN_EMAIL.toLowerCase()){
+    // Reba role muri profiles; kuba email ihuye gusa ntibihagije.
+    const {data:profile,error:profileError}=await supabase
+      .from("profiles").select("role").eq("id",currentUser.id).maybeSingle();
+    logged=!profileError && profile?.role==="admin";
+  }
+  $("#loginPanel").classList.toggle("hidden",logged);
+  $("#dashboard").classList.toggle("hidden",!logged);
+  if(currentUser&&!logged) message("#loginMsg","Iyi konti ntiyemerewe kuba Admin. Reba ko email ari iyawe kandi role muri profiles ari admin.");
+  if(logged){renderAdmin();renderAdminLessons();renderAdminResources();}
+}
+
+$("#search").addEventListener("input",render); $("#filter").addEventListener("change",render);
+$("#tabs").addEventListener("click",event=>{const b=event.target.closest("[data-cat]");if(!b)return;active=b.dataset.cat;document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t===b));render();});
+document.querySelectorAll("[data-catlink]").forEach(link=>link.addEventListener("click",()=>{active=link.dataset.catlink;$("#filter").value=active;document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.cat===active));render();}));
+$("#menu").addEventListener("click",()=>$("#nav").classList.toggle("open")); $("#nav").addEventListener("click",e=>{if(e.target.closest("a"))$("#nav").classList.remove("open");});
+$("#openAdmin").addEventListener("click",()=>{$("#admin").classList.add("show");$("#admin").scrollIntoView({behavior:"smooth"});});
+$("#loginForm").addEventListener("submit",async e=>{e.preventDefault();setStatus("#loginMsg","Turimo kugenzura...");const email=$("#username").value.trim();const password=$("#password").value;const {error}=await supabase.auth.signInWithPassword({email,password});if(error){setStatus("#loginMsg","Kwinjira byanze: "+error.message);return;}await checkAdmin();if(!logged){await supabase.auth.signOut();setStatus("#loginMsg","Email winjije ntabwo yemerewe kuba admin. Reba ADMIN_EMAIL na SQL policy.");return;}setStatus("#loginMsg","Winjiye neza.");});
+$("#logout").addEventListener("click",async()=>{await supabase.auth.signOut();logged=false;currentUser=null;$("#dashboard").classList.add("hidden");$("#loginPanel").classList.remove("hidden");$("#loginForm").reset();resetPostForm();});
+$("#cancelEdit").addEventListener("click",resetPostForm);
+$("#postForm").addEventListener("submit",async e=>{e.preventDefault();if(!logged||!currentUser)return;const title=$("#title").value.trim(),description=$("#description").value.trim(),rawURL=$("#url").value.trim(),url=rawURL?safeURL(rawURL):"";if(!title||!description){setStatus("#postMsg","Uzuza umutwe n'ibisobanuro.");return;}if(rawURL&&!url){setStatus("#postMsg","Link igomba gutangirana na http:// cyangwa https://.");return;}const record={title,category:$("#category").value,description,deadline:$("#deadline").value.trim()||null,url:url||null,created_by:currentUser.id};const id=$("#editId").value;let result=id?await supabase.from("posts").update(record).eq("id",id):await supabase.from("posts").insert(record);if(result.error){setStatus("#postMsg","Ntibyabitswe: "+result.error.message);return;}resetPostForm();setStatus("#postMsg","Itangazo ryabitswe.");await loadData();});
+$("#adminList").addEventListener("click",async e=>{const del=e.target.closest("[data-del-post]");if(del&&logged&&confirm("Urashaka gusiba iri tangazo?")){const {error}=await supabase.from("posts").delete().eq("id",del.dataset.delPost);if(error){setStatus("#postMsg","Ntibyasibwe: "+error.message);return;}await loadData();}});
+$("#lessonForm").addEventListener("submit",async e=>{e.preventDefault();if(!logged||!currentUser)return;const raw=$("#lessonUrl").value.trim(),url=safeURL(raw);if(!url){setStatus("#lessonMsg","Shyiramo link itangirira kuri http:// cyangwa https://.");return;}const record={title:$("#lessonTitle").value.trim(),category:$("#lessonCategory").value.trim()||null,description:$("#lessonDescription").value.trim()||null,lesson_url:url,created_by:currentUser.id};const {error}=await supabase.from("lessons").insert(record);if(error){setStatus("#lessonMsg","Isomo ntiryabitswe: "+error.message);return;}e.target.reset();setStatus("#lessonMsg","Isomo ryabitswe neza.");await loadData();});
+$("#adminLessons").addEventListener("click",async e=>{const b=e.target.closest("[data-del-lesson]");if(b&&logged&&confirm("Urashaka gusiba iri somo?")){const {error}=await supabase.from("lessons").delete().eq("id",b.dataset.delLesson);if(error){setStatus("#lessonMsg","Ntibyasibwe: "+error.message);return;}await loadData();}});
+$("#copyPaymentCode").addEventListener("click",async()=>{try{await navigator.clipboard.writeText("*182*8*1*918227#");setStatus("#resourceMsg","USSD code yakopowe.","success");}catch{alert("USSD code yo kwishyura ni: *182*8*1*918227# — FABRICE");}});
+$("#resourceForm").addEventListener("submit",async e=>{
+  e.preventDefault(); if(!logged||!currentUser)return;
+  const title=$("#resourceTitle").value.trim(), fileInput=$("#resourcePdfFile"), pdf=fileInput.files?.[0]||null;
+  const rawFileUrl=$("#resourceFileUrl").value.trim(), fileUrl=rawFileUrl?safeURL(rawFileUrl):"";
+  if(!title){setStatus("#resourceMsg","Andika izina ry'igikoresho.");return;}
+  if(!pdf&&!fileUrl){setStatus("#resourceMsg","Upload PDF cyangwa ushyiremo link ya dosiye.");return;}
+  if(pdf && (pdf.type!=="application/pdf" && !pdf.name.toLowerCase().endsWith(".pdf"))){setStatus("#resourceMsg","Hitamo dosiye ya PDF gusa.");return;}
+  if(pdf && pdf.size>20*1024*1024){setStatus("#resourceMsg","PDF irengeje 20 MB. Gabanya ubunini bwayo wongere ugerageze.");return;}
+  if(rawFileUrl&&!fileUrl){setStatus("#resourceMsg","Link igomba gutangirana na https:// cyangwa http://.");return;}
+  setStatus("#resourceMsg",pdf?"Turimo kubika PDF...":"Turimo kubika igikoresho...");
+  let storagePath=null;
+  if(pdf){
+    const cleanName=pdf.name.normalize('NFKD').replace(/[^a-zA-Z0-9._-]+/g,'_').slice(-100)||'resource.pdf';
+    storagePath=`${currentUser.id}/${Date.now()}-${cleanName}`;
+    const {error:uploadError}=await supabase.storage.from('study-resources').upload(storagePath,pdf,{contentType:'application/pdf',upsert:false});
+    if(uploadError){setStatus("#resourceMsg","PDF ntiyoherejwe: "+uploadError.message+". Reba ko wakoze SQL na bucket ya study-resources.");return;}
+  }
+  const record={title,category:$("#resourceCategory").value,description:$("#resourceDescription").value.trim()||null,created_by:currentUser.id};
+  const {data:created,error}=await supabase.from("resources").insert(record).select("id").single();
+  if(error){if(storagePath)await supabase.storage.from('study-resources').remove([storagePath]);setStatus("#resourceMsg","Ntibyabitswe: "+error.message+". Reba SQL ya resources.");return;}
+  const fileRecord={resource_id:created.id,file_url:fileUrl||null,storage_path:storagePath};
+  const {error:fileError}=await supabase.from("resource_files").insert(fileRecord);
+  if(fileError){await supabase.from("resources").delete().eq("id",created.id);if(storagePath)await supabase.storage.from('study-resources').remove([storagePath]);setStatus("#resourceMsg","Dosiye ntiyabitswe muri database: "+fileError.message+". Ongera urebe SQL ya resources.");return;}
+  e.target.reset();setStatus("#resourceMsg",pdf?"PDF n'igikoresho byabitswe neza muri Supabase.":"Igikoresho na link byabitswe neza.","success");await loadData();
+});
+$("#adminResources").addEventListener("click",async e=>{const b=e.target.closest("[data-del-resource]");if(b&&logged&&confirm("Urashaka gusiba iki gikoresho?")){const {error}=await supabase.from("resources").delete().eq("id",b.dataset.delResource);if(error){setStatus("#resourceMsg","Ntibyasibwe: "+error.message);return;}await loadData();}});
+/* Irembo service guide: prices intentionally not guessed; verify all details on official IremboGov. */
+const services={identity:{title:"Indangamuntu",desc:"Emeza igiciro n'ibisabwa bigezweho kuri IremboGov.",items:[["Gusimbuza indangamuntu yatakaye/yangiritse","Emeza igiciro","Banza ukurikize inzira yo kwemezwa na RIB. Emeza amabwiriza agezweho."],["Icyemezo gisimbura indangamuntu","Emeza igiciro","Reba ibisabwa n'amafaranga agezweho kuri IremboGov."],["Gukosora amakuru y'indangamuntu","Biterwa na serivisi","Ibisabwa biterwa n'impamvu yo gukosora."]] },documents:{title:"Ibyemezo n'inyandiko",desc:"Ibiciro biterwa n'icyemezo n'ubwoko bw'ubusabe.",items:[["Icyemezo cy'irangamimerere","Emeza igiciro","Reba ibisabwa n'amafaranga agezweho kuri IremboGov."],["Icyemezo cy'ubwenegihugu","Emeza igiciro","Reba ibisabwa n'amafaranga agezweho kuri IremboGov."],["Ikindi cyemezo cya Leta","Biterwa na serivisi","Shaka izina ry'icyemezo kuri IremboGov."]] },public:{title:"Serivisi rusange",desc:"Hitamo serivisi kuri portal yemewe kugira ngo ubone igiciro nyacyo.",items:[["Uruhushya rwo gutwara ibinyabiziga","Emeza igiciro","Igiciro giterwa n'ubwoko bw'uruhushya."],["Serivisi z'ubucuruzi","Biterwa na serivisi","Reba ibisabwa n'amafaranga kuri IremboGov."],["Izindi serivisi za Leta","Biterwa na serivisi","Ibisabwa ntibihura kuri serivisi zose."]] }};
+document.querySelectorAll("[data-service]").forEach(button=>button.addEventListener("click",()=>{const group=services[button.dataset.service];$("#resultTitle").textContent=group.title;$("#resultDesc").textContent=group.desc;$("#serviceList").innerHTML=group.items.map(item=>`<article class="serviceitem"><h3>${esc(item[0])}</h3><div class="price">${esc(item[1])}</div><p>${esc(item[2])}</p><a class="btn primary" href="https://www.irembo.gov.rw/" target="_blank" rel="noopener">Reba kuri IremboGov ↗</a></article>`).join("");$("#results").hidden=false;$("#results").scrollIntoView({behavior:"smooth",block:"start"});}));
+$("#closeResults").addEventListener("click",()=>$("#results").hidden=true);
+$("#year").textContent=new Date().getFullYear();
+supabase.auth.onAuthStateChange(()=>{setTimeout(checkAdmin,0);});
+await loadData(); await checkAdmin();
+</script>
+
+</body>
+</html>
